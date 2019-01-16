@@ -1,0 +1,60 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf200
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww33400\viewh19580\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 #include <stdio.h>\
+\
+// up\uc0\u345 \'edmn\u283  netu\'9a\'edm co je toto\
+main (int argc, char const *argv[])\
+// definuje\'9a matrici a, b, c, d, e + hodnotu a, b, c, d\
+\{\
+  int a[3][3] = \{\
+    \{1, 2, 3\},\
+    \{-1, -2, 0\},\
+    \{2, 3, 5\}\
+  \};\
+\
+  int b[3][3] = \{\
+    \{8, -3, 3\},\
+    \{-1, 8, 0\},\
+    \{7, 3, 0\}\
+  \};\
+\
+  int c[3][3] = \{\
+    \{8, -3, 3\},\
+    \{-1, 8, 0\},\
+    \{7, 3, 0\}\
+  \};\
+\
+  int d[3][3] = \{\
+    \{8, -3, 3\},\
+    \{-1, 8, 0\},\
+    \{7, 3, 0\}\
+  \};\
+\
+  int e[3][3];\
+// forloop je vlastn\uc0\u283  loop a if dohromady; \u345 \'edk\'e1\'9a \'9ee dokud i/j nen\'ed 3 (t\u345 et\'ed \u345 \'e1dka/sloupec), provede to v\'fdpo\u269 et a p\u345 i\u269 te jedna\
+  for (int i = 0; i < 3; ++i)\
+    \{\
+      for (int j = 0; j < 3; ++j)\
+	\{\
+// tady definuje\'9a hodnotu e\
+	  e[i][j] = a[i][j] + b[i][j] + c[i][j] + d[i][j];\
+	\}\
+    \}\
+// tohle je jen aby se ov\uc0\u283 \u345 ilo jestli to funguje, hod\'ed ti to output 0 kdy\'9e to jde spr\'e1vn\u283 ; m\u367 \'9ee\'9a smazat, je nepot\u345 ebn\'fd, bylo jen pro ov\u283 \u345 en\'ed kdy\'9e jsem vymej\'9aleli\
+  for (int i = 0; i < 3; ++i)\
+    \{\
+      for (int j = 0; j < 3; ++j)\
+	\{\
+	  printf ("%d", e[i][j]);\
+	\}\
+      printf ("\\n");\
+    \}\
+\
+  return 0;\
+\}\
+}
