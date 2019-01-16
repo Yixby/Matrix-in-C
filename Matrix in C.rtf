@@ -1,0 +1,94 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf200
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\csgray\c0\c0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10820\viewh7400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf2 \cb3 /* Copyright (c) 2019 FIRST. All rights reserved.\
+ *\
+ * Redistribution and use in source and binary forms, with or without modification,\
+ * are permitted (subject to the limitations in the disclaimer below) provided that\
+ * the following conditions are met:\
+ *\
+ * Redistributions of source code must retain the above copyright notice, this list\
+ * of conditions and the following disclaimer.\
+ *\
+ * Redistributions in binary form must reproduce the above copyright notice, this\
+ * list of conditions and the following disclaimer in the documentation and/or\
+ * other materials provided with the distribution.\
+ *\
+ * Neither the name of FIRST nor the names of its contributors may be used to endorse or\
+ * promote products derived from this software without specific prior written permission.\
+ *\
+ * NO EXPRESS OR IMPLIED LICENSES TO ANY PARTY'S PATENT RIGHTS ARE GRANTED BY THIS\
+ * LICENSE. THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS\
+ * "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,\
+ * THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\
+ * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE\
+ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\
+ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR\
+ * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER\
+ * CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,\
+ * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\
+ * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\
+ */\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf2 \
+\
+#include <stdio.h>\
+\
+// up\uc0\u345 \'edmn\u283  netu\'9a\'edm co je toto\
+main (int argc, char const *argv[])\
+\
+// definuje\'9a matrici a, b, c, d, e + hodnotu a, b, c, d\
+\{\
+  int a[3][3] = \{\
+    \{1, 2, 3\},\
+    \{-1, -2, 0\},\
+    \{2, 3, 5\}\
+  \};\
+\
+  int b[3][3] = \{\
+    \{8, -3, 3\},\
+    \{-1, 8, 0\},\
+    \{7, 3, 0\}\
+  \};\
+\
+  int c[3][3] = \{\
+    \{8, -3, 3\},\
+    \{-1, 8, 0\},\
+    \{7, 3, 0\}\
+  \};\
+\
+  int d[3][3] = \{\
+    \{8, -3, 3\},\
+    \{-1, 8, 0\},\
+    \{7, 3, 0\}\
+  \};\
+\
+  int e[3][3];\
+\
+// forloop je vlastn\uc0\u283  loop a if dohromady; \u345 \'edk\'e1\'9a \'9ee dokud i/j nen\'ed 3 (t\u345 et\'ed \u345 \'e1dka/sloupec), provede to v\'fdpo\u269 et a p\u345 i\u269 te jedna\
+  for (int i = 0; i < 3; ++i)\
+    \{\
+      for (int j = 0; j < 3; ++j)\
+	\{\
+// tady definuje\'9a hodnotu e\
+	  e[i][j] = a[i][j] + b[i][j] + c[i][j] + d[i][j];\
+	\}\
+    \}\
+\
+// tohle je jen aby se ov\uc0\u283 \u345 ilo jestli to funguje, hod\'ed ti to output 0 kdy\'9e to jde spr\'e1vn\u283 ; m\u367 \'9ee\'9a smazat, je nepot\u345 ebn\'fd, bylo jen pro ov\u283 \u345 en\'ed kdy\'9e jsem vym\'fd\'9aleli\
+  for (int i = 0; i < 3; ++i)\
+    \{\
+      for (int j = 0; j < 3; ++j)\
+	\{\
+	  printf ("%d", e[i][j]);\
+	\}\
+      printf ("\\n");\
+    \}\
+\
+  return 0;\
+\}\
+}
